@@ -19,9 +19,9 @@ az network vnet create --resource-group MainResourceGroup --name MainVirtualNetw
 az network nsg create --resource-group MainResourceGroup --name NetworkSecurityGroup
 
 az network nsg rule create --resource-group MainResourceGroup --nsg-name NetworkSecurityGroup --name SSH --destination-port-ranges 22 --priority 100
-az network nsg rule create --resource-group MainResourceGroup --nsg-name NetworkSecurityGroup --name HTTP --destination-port-ranges 80 -- priority 101
-az network nsg rule create --resource-group MainResourceGroup --nsg-name NetworkSecurityGroup --name HTTPS --destination-port-ranges 443 -- priority 102
-az network nsg rule create --resource-group MainResourceGroup --nsg-name NetworkSecurityGroup --name JenkFly --destination-port-ranges 8080 -- priority 103
+az network nsg rule create --resource-group MainResourceGroup --nsg-name NetworkSecurityGroup --name HTTP --destination-port-ranges 80 --priority 101
+az network nsg rule create --resource-group MainResourceGroup --nsg-name NetworkSecurityGroup --name HTTPS --destination-port-ranges 443 --priority 102
+az network nsg rule create --resource-group MainResourceGroup --nsg-name NetworkSecurityGroup --name JenkFly --destination-port-ranges 8080 --priority 103
 
 #Creating public IP for Jenkins and Wildfly:
 az network public-ip create --resource-group MainResourceGroup --name JenkinsIP --dns-name jenkinsvm
