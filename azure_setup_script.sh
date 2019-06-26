@@ -32,5 +32,5 @@ az network nic create --resource-group MainResourceGroup --name JenkinsNetworkIn
 az network nic create --resource-group MainResourceGroup --name WildFlyNetworkInterface --vnet-name MainVirtualNetwork --subnet VirtualNetworkSubnet --network-security-group NetworkSecurityGroup --public-ip-address WildflyIP
 
 #Creating Jenkins and Wildfly VM:
-az vm create --resource-group MainResourceGroup --name JenkinsVirtualMachine --image UbuntuLTS --size Standard_B1s --nic JenkinsNetworkInterface --admin-username jenkins --generate-ssh-keys
-az vm create --resource-group MainResourceGroup --name WildflyVirtualMachine --image UbuntuLTS --size Standard_B1s --nic WildFlyNetworkInterface --admin-username wildfly --generate-ssh-keys
+az vm create --resource-group MainResourceGroup --name JenkinsVirtualMachine --image UbuntuLTS --size Standard_B1s --nic JenkinsNetworkInterface --admin-username --admin-password Password1234 jenkins --generate-ssh-keys
+az vm create --resource-group MainResourceGroup --name WildflyVirtualMachine --image UbuntuLTS --size Standard_B1s --nic WildFlyNetworkInterface --admin-username --admin-password Password1234 wildfly --generate-ssh-keys
